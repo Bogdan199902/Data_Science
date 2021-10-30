@@ -1,29 +1,25 @@
 Describe:
-### Q1 Before start working on the problems, here is a small example to help you understand how to write your own answers.
+### Q1 
+### Before start working on the problems, here is a small example to help you understand how to write your own answers.
 ### In short, the solution should be written within the function body given, and the final result should be returned. 
 ### Then the autograder will try to call the function and validate your returned result accordingly.
-
 ### Find a list of all of the names in the following string using regex.
 
 import re
 def names():
     simple_string = """Amy is 5 years old, and her sister Mary is 2 years old. 
     Ruth and Peter, their parents, have 3 kids."""
-
     names = re.findall(r"[A-Z][a-z+]{2,}", simple_string)
     return names
 
-    # names is a list of all words that start with uppercase
 n = names()
 
-    # You can now join or iterate throw this list to print each name using for loop
 for i in range(len(n)):
-    # get a string with only names
-
     words = "".join(n[i])
     print(words)
     
-### Q2 The dataset file in [assets/grades.txt](assets/grades.txt) contains a line separated list of people with their grade in 
+### Q2
+### The dataset file in [assets/grades.txt](assets/grades.txt) contains a line separated list of people with their grade in 
 ### a class. Create a regex to generate a list of just those students who received a B in the course.
 
 import re
@@ -36,15 +32,14 @@ def grades():
 
 print(grades())
 
-### Q3 Consider the standard web log file in assets/logdata.txt. This file records the access a user makes when visiting a web page (like this one!). 
+### Q3 
+### Consider the standard web log file in assets/logdata.txt. This file records the access a user makes when visiting a web page (like this one!). 
 ### Each line of the log has the following items:
-
 ### a host (e.g., '146.204.224.152')
 ### a user_name (e.g., 'feest6811' note: sometimes the user name is missing! In this case, use '-' as the value for the username.)
 ### the time a request was made (e.g., '21/Jun/2019:15:45:24 -0700')
 ### the post request type (e.g., 'POST /incentivize HTTP/1.1' note: not everything is a POST!)
 ### Your task is to convert this into a list of dictionaries, where each dictionary looks like the following:
-
 ### example_dict = {"host":"146.204.224.152", 
 ###                "user_name":"feest6811", 
 ###                "time":"21/Jun/2019:15:45:24 -0700",
